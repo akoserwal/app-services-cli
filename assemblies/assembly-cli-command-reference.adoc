@@ -1,9 +1,11 @@
 [id="cli-command-reference_{context}"]
-= CLI command reference
+= CLI command reference (rhoas)
 
 [role="_abstract"]
 You use the `rhoas` CLI to manage your application services from the command line.
 
+
+include::../modules/ref-cli-cluster-bind.adoc[leveloffset=+1]
 
 include::../modules/ref-cli-cluster-connect.adoc[leveloffset=+1]
 
@@ -18,6 +20,10 @@ include::../modules/ref-cli-completion-fish.adoc[leveloffset=+1]
 include::../modules/ref-cli-completion-zsh.adoc[leveloffset=+1]
 
 include::../modules/ref-cli-completion.adoc[leveloffset=+1]
+
+include::../modules/ref-cli-kafka-consumergroup-delete.adoc[leveloffset=+1]
+
+include::../modules/ref-cli-kafka-consumergroup-describe.adoc[leveloffset=+1]
 
 include::../modules/ref-cli-kafka-consumergroup-list.adoc[leveloffset=+1]
 
