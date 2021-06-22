@@ -1,174 +1,4 @@
 
-<a name="v0.24.4"></a>
-## [v0.24.4](https://github.com/redhat-developer/app-services-cli/compare/0.24.3...v0.24.4) (2021-06-14)
-
-### Bug Fixes
-
-* fix invalid i18n arg ([#681](https://github.com/redhat-developer/app-services-cli/issues/681))
-* minor bug fixes and validations ([#696](https://github.com/redhat-developer/app-services-cli/issues/696))
-* misformatted error message ([#669](https://github.com/redhat-developer/app-services-cli/issues/669))
-* erroneous message for invalid option ([#689](https://github.com/redhat-developer/app-services-cli/issues/689))
-* localize id for cluster info ([#688](https://github.com/redhat-developer/app-services-cli/issues/688))
-* fix invalid i18n ID ([#680](https://github.com/redhat-developer/app-services-cli/issues/680))
-* **config:** create config directory if it does not exist ([#683](https://github.com/redhat-developer/app-services-cli/issues/683))
-* **kafka create:** run interactive if no name provided and fix typos ([#705](https://github.com/redhat-developer/app-services-cli/issues/705))
-* **kafka delete:** show proper message for delete operation ([#700](https://github.com/redhat-developer/app-services-cli/issues/700))
-* **kafka topic:** update regexp for topic name ([#663](https://github.com/redhat-developer/app-services-cli/issues/663))
-
-### Features
-
-* Add ability to specify a binding name using binding-name flag
-* **completion:** dynamic completion for suitable flags ([#702](https://github.com/redhat-developer/app-services-cli/issues/702))
-* **completion:** static completion for suitable flags ([#686](https://github.com/redhat-developer/app-services-cli/issues/686))
-* **kafka topic:** add search flag to list subcommand ([#709](https://github.com/redhat-developer/app-services-cli/issues/709))
-
-
-<a name="0.24.3"></a>
-## [0.24.3](https://github.com/redhat-developer/app-services-cli/compare/0.24.2...0.24.3) (2021-04-26)
-
-### Bug Fixes
-
-* fix panic when no kafkas available to selected ([#628](https://github.com/redhat-developer/app-services-cli/issues/628))
-
-
-<a name="0.24.2"></a>
-## [0.24.2](https://github.com/redhat-developer/app-services-cli/compare/0.24.1...0.24.2) (2021-04-23)
-
-### Bug Fixes
-
-* **iostreams:** make coloured output work on Windows ([#625](https://github.com/redhat-developer/app-services-cli/issues/625))
-
-
-<a name="0.24.1"></a>
-## [0.24.1](https://github.com/redhat-developer/app-services-cli/compare/0.24.0...0.24.1) (2021-04-20)
-
-### Bug Fixes
-
-* **version:** ignore pre-releases when checking version ([#610](https://github.com/redhat-developer/app-services-cli/issues/610))
-
-
-<a name="0.24.0"></a>
-## [0.24.0](https://github.com/redhat-developer/app-services-cli/compare/0.23.1...0.24.0) (2021-04-20)
-
-### Features
-
-* use production APIs by default ([#606](https://github.com/redhat-developer/app-services-cli/issues/606))
-
-### BREAKING CHANGE
-
-
-The production environment is now the default environment used. To continue using staging, run `rhoas login --api-gateway=stage --auth-url=stage --mas-auth-url=stage`
-
-
-<a name="0.23.1"></a>
-## [0.23.1](https://github.com/redhat-developer/app-services-cli/compare/0.23.0...0.23.1) (2021-04-20)
-
-### Bug Fixes
-
-* **consumergroup:** fix wrong active members value ([#608](https://github.com/redhat-developer/app-services-cli/issues/608))
-* **login:** clear MAS tokens from config when using token login ([#605](https://github.com/redhat-developer/app-services-cli/issues/605))
-
-
-<a name="0.23.0"></a>
-## [0.23.0](https://github.com/redhat-developer/app-services-cli/compare/0.22.2...0.23.0) (2021-04-20)
-
-### Bug Fixes
-
-* add support for creating operator based resource ([#599](https://github.com/redhat-developer/app-services-cli/issues/599))
-* return nil when no Kafka was selected ([#602](https://github.com/redhat-developer/app-services-cli/issues/602))
-* update pkged file ([#592](https://github.com/redhat-developer/app-services-cli/issues/592))
-* pointer error ([#588](https://github.com/redhat-developer/app-services-cli/issues/588))
-* set explicit valid argument number for command ([#585](https://github.com/redhat-developer/app-services-cli/issues/585))
-* return request output format when list is empty ([#584](https://github.com/redhat-developer/app-services-cli/issues/584))
-* **completion:** fix dynamic completions for Bash ([#587](https://github.com/redhat-developer/app-services-cli/issues/587))
-
-### Features
-
-* show when new version is available ([#598](https://github.com/redhat-developer/app-services-cli/issues/598))
-* Add bind command using SBO SDK ([#534](https://github.com/redhat-developer/app-services-cli/issues/534))
-* add consumer group describe command ([#536](https://github.com/redhat-developer/app-services-cli/issues/536))
-* **consumergroup:** add consumer group commands ([#596](https://github.com/redhat-developer/app-services-cli/issues/596))
-
-### BREAKING CHANGE
-
-
-The `list` commands now return the original response
-object in JSON or YAML, instead of nil, depending on the format requested.
-
-
-<a name="0.22.2"></a>
-## [0.22.2](https://github.com/redhat-developer/app-services-cli/compare/0.22.1...0.22.2) (2021-04-15)
-
-### Features
-
-* **serviceaccount:** add owner column to table ([#578](https://github.com/redhat-developer/app-services-cli/issues/578))
-
-
-<a name="0.22.1"></a>
-## [0.22.1](https://github.com/redhat-developer/app-services-cli/compare/0.22.0...0.22.1) (2021-04-14)
-
-### Bug Fixes
-
-* use the OpenShift online terms ([#572](https://github.com/redhat-developer/app-services-cli/issues/572))
-
-### Features
-
-* **consumergroup:** add delete command ([#542](https://github.com/redhat-developer/app-services-cli/issues/542))
-* **topic:** add retention size flag for topic create ([#563](https://github.com/redhat-developer/app-services-cli/issues/563))
-
-
-<a name="0.22.0"></a>
-## [0.22.0](https://github.com/redhat-developer/app-services-cli/compare/0.21.4...0.22.0) (2021-04-13)
-
-### Bug Fixes
-
-* **topic:** set maximum partition value to 100 ([#560](https://github.com/redhat-developer/app-services-cli/issues/560))
-
-### Features
-
-* **auth:** remove double-login for code flow ([#561](https://github.com/redhat-developer/app-services-cli/issues/561))
-* **topic:** Show 'Unlimited' when value is -1 ([#559](https://github.com/redhat-developer/app-services-cli/issues/559))
-
-
-<a name="0.21.4"></a>
-## [0.21.4](https://github.com/redhat-developer/app-services-cli/compare/0.21.3...0.21.4) (2021-04-12)
-
-### Bug Fixes
-
-* MAS-SSO token refresh was not enabled ([#558](https://github.com/redhat-developer/app-services-cli/issues/558))
-
-
-<a name="0.21.3"></a>
-## [0.21.3](https://github.com/redhat-developer/app-services-cli/compare/0.21.2...0.21.3) (2021-04-12)
-
-### Bug Fixes
-
-* use direct link to the operator repository in the status ([#551](https://github.com/redhat-developer/app-services-cli/issues/551))
-* **serviceaccount:** update regex pattern for description ([#552](https://github.com/redhat-developer/app-services-cli/issues/552))
-
-
-<a name="0.21.2"></a>
-## [0.21.2](https://github.com/redhat-developer/app-services-cli/compare/0.21.1...0.21.2) (2021-04-09)
-
-### Bug Fixes
-
-* **serviceaccount:** allow capital letters in description ([#550](https://github.com/redhat-developer/app-services-cli/issues/550))
-
-
-<a name="0.21.1"></a>
-## [0.21.1](https://github.com/redhat-developer/app-services-cli/compare/0.21.0...0.21.1) (2021-04-09)
-
-### Bug Fixes
-
-* update mas-sso url ([#545](https://github.com/redhat-developer/app-services-cli/issues/545))
-* increase timeout for watching managed kafka to 60 seconds ([#521](https://github.com/redhat-developer/app-services-cli/issues/521))
-
-### Features
-
-* **consumergroup:** add consumergroup cmd with list subcommand ([#530](https://github.com/redhat-developer/app-services-cli/issues/530))
-* **kafka:** add a terms and conditions check ([#529](https://github.com/redhat-developer/app-services-cli/issues/529))
-
-
 <a name="0.21.0"></a>
 ## [0.21.0](https://github.com/redhat-developer/app-services-cli/compare/0.20.6...0.21.0) (2021-04-01)
 
@@ -212,18 +42,28 @@ This change will mean that old Kafka instances are inaccessible without overridi
 
 
 <a name="0.20.3"></a>
-## [0.20.3](https://github.com/redhat-developer/app-services-cli/compare/0.20.1...0.20.3) (2021-03-29)
+## [0.20.3](https://github.com/redhat-developer/app-services-cli/compare/0.20.2...0.20.3) (2021-03-29)
 
 ### Bug Fixes
 
-* **config:** check if .config directory exists ([#498](https://github.com/redhat-developer/app-services-cli/issues/498))
-* **kafka topic:** creation in interactive mode should check if name is available ([#492](https://github.com/redhat-developer/app-services-cli/issues/492))
 * **serviceaccount:** fix invalid i18n message ([#509](https://github.com/redhat-developer/app-services-cli/issues/509))
 * **serviceaccount reset-credentials:** files should use clientID, clientSecret instead of user, password ([#502](https://github.com/redhat-developer/app-services-cli/issues/502))
 
 ### Features
 
 * add support for generating modular docs ([#504](https://github.com/redhat-developer/app-services-cli/issues/504))
+
+
+<a name="0.20.2"></a>
+## [0.20.2](https://github.com/redhat-developer/app-services-cli/compare/0.20.1...0.20.2) (2021-03-26)
+
+### Bug Fixes
+
+* **config:** check if .config directory exists ([#498](https://github.com/redhat-developer/app-services-cli/issues/498))
+* **kafka topic:** creation in interactive mode should check if name is available ([#492](https://github.com/redhat-developer/app-services-cli/issues/492))
+
+### Features
+
 * **kafka create:** add --use flag to set current Kafka instance ([#491](https://github.com/redhat-developer/app-services-cli/issues/491))
 
 
